@@ -4,7 +4,6 @@ skala_list = ["Celsius", "Fahrenheit", "Kelvin", "Reamur"]
 simbol = {"Celsius": "°C", "Fahrenheit": "°F", "Kelvin": "K", "Reamur": "°Re"}
 
 
-# Fungsi buatan sendiri: ubah semua skala ke Celsius dulu, lalu ke skala tujuan
 def konversi_suhu(nilai, asal, tujuan):
     if asal == "Celsius":
         c = nilai
@@ -28,7 +27,6 @@ def konversi_suhu(nilai, asal, tujuan):
 st.title("Konverter Suhu")
 st.write("Ubah suhu antar skala: Celsius, Fahrenheit, Kelvin, dan Reamur")
 
-# 4 widget input (+ 1 checkbox)
 suhu = st.number_input("Masukkan suhu", -1000.0, 1000.0, 25.0)
 asal = st.selectbox("Dari skala", skala_list)
 tujuan = st.radio("Ke skala", skala_list)
